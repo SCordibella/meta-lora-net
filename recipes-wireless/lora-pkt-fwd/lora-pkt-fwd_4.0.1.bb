@@ -12,7 +12,7 @@ DEPENDS += "lora-gateway"
 
 S = "${WORKDIR}/packet_forwarder-${PV}"
 
-CFLAGS_append = "-I ${includedir}/libloragw -I ${S}/lora_pkt_fwd/inc -I ${S}/util_tx_test/inc "
+CFLAGS_append = " -I ${includedir}/libloragw -I ${S}/lora_pkt_fwd/inc -I ${S}/util_tx_test/inc "
 
 do_configure_prepend() {
 	export LGW_PATH="${STAGING_LIBDIR}/libloragw"

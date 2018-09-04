@@ -10,7 +10,7 @@ SRC_URI[sha256sum] = "1a0447d5e8183d08e6dce5f739f6872b9c57824b98f4078830d5ee21b1
 
 S = "${WORKDIR}/lora_gateway-${PV}"
 
-CFLAGS_append = "-I ${S}/libloragw/inc -I ${S}/libloragw -I ${S}/util_pkt_logger/inc "
+CFLAGS_append = " -I ${S}/libloragw/inc -I ${S}/libloragw -I ${S}/util_pkt_logger/inc "
 
 do_install() {
 	install -d ${D}${bindir}
